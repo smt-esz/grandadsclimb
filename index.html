@@ -298,15 +298,15 @@ sup.fn{font-size:.65em;color:var(--accent);font-weight:700;margin-left:1px}
 </main>
 
 <script>
-var CARD='M7'; /* nicht mehr angezeigt, nur noch fuer die alte Zuweisung */
-var CARDS={front:{n:'M7',t:'notice board'},back:{n:'M8',t:'leaflet'}}; /* Materialnummern: hier aendern */
+var CARD='M6'; /* nicht mehr angezeigt, nur noch fuer die alte Zuweisung */
+var CARDS={front:{n:'M6',t:'notice board'},back:{n:'M7',t:'leaflet'}}; /* Materialnummern: hier aendern */
 var KICKER='SOUL English · Class 7 · Module 2 · Station 7';
 
 /* =====================================================================
    Grandad's Climb: the story. One object per scene.
    t      = paragraphs (always shown)
    when   = [condition, paragraph] shown only if condition(state) is true
-   look   = which card helps here (front = M7 notice board, back = M8 leaflet); lookGet:1 = 'Now get', else 'Use'; lookIf = only if this flag is set
+   look   = which card helps here (front = M6 notice board, back = M7 leaflet); lookGet:1 = 'Now get', else 'Use'; lookIf = only if this flag is set
    ask    = small reading question about the card (must be right to go on)
    ch     = choices: t (text), fx (what it changes), r (what happens, shown on the next scene), go (next scene)
    time   = minutes added when you arrive here (walking)
@@ -333,7 +333,7 @@ var SCENES = {
  notice:{look:"front",lookGet:1,t:["I read every paper on the notice board."],
   ask:{q:"What does the notice board say about the top of the mountain this afternoon?",
    o:[{t:"From about 2 pm, the top is in the cloud.",c:1},{t:"It is sunny and clear all day.",c:0},{t:"It snows in the afternoon.",c:0}],
-   no:"Look at the weather paper on M7 again."},
+   no:"Look at the weather paper on M6 again."},
   ch:[{t:"OK. I've got it.",fx:{set:"knows"},r:"Cloud on the top from two o'clock. And the warden's note says: be on the top by half past one. I put it in my head.",go:"shoes"}]},
 
  shoes:{t:["Back in our room. My walking boots stand next to the door. They are heavy and a bit ugly. My new trainers are light and look cool."],
@@ -365,7 +365,7 @@ var SCENES = {
  leaflet2:{look:"back",lookGet:1,t:["I read the leaflet from the first line to the last."],
   ask:{q:"What does the leaflet say about the Pyg Track?",
    o:[{t:"A wrong turn leads to Crib Goch, a dangerous ridge.",c:1},{t:"The railway runs next to it.",c:0},{t:"It is a quiet path from the west.",c:0}],
-   no:"Look at the line for the Pyg Track on M8 again."},
+   no:"Look at the line for the Pyg Track on M7 again."},
   ch:[{t:"OK. I've got it.",fx:{set:"leaflet"},r:"The leaflet is clear. Six paths, and not one of them is easy.",go:"path"}]},
 
  path:{look:"back",lookIf:"leaflet",t:["'Which path, boss?' Mum asks. 'Today you decide.'"],
